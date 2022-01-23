@@ -1,6 +1,6 @@
 import { geoJSON, Icon } from "leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import { GS_station } from "../../untils/apis";
+import { GS_station } from "../../utils/apis";
 import withLoadOff from "../HOC/withLoadOff";
 
 const SwitchStation = () => {

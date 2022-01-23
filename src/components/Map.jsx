@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, LayersControl } from 'react-leaflet'
 import MiniMapControl from "./MiniMapControl";
 
 import { MapContainerWrap } from "./Styled";
-import { TDT_API_Par, Mapbox_API, OpenStreetMap_API } from "../untils/apis";
+import { TDT_API_Par, Mapbox_API, OpenStreetMap_API } from "../utils/apis";
 
 const Map = ({ setMap }) => {
   return (

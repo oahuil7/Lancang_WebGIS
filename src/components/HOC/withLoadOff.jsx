@@ -1,6 +1,6 @@
 import { Switch } from "antd";
 import { useState, useCallback, useContext } from "react";
-import cachedFetch from '../../untils/cachedFetch';
+import cachedFetch from '../../utils/cachedFetch';
 import { MapContext } from "../Context/ContextManager";
 
 function withLoadOff(url, fn) {

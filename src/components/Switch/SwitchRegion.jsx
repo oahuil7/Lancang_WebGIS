@@ -1,5 +1,5 @@
 import { geoJSON } from "leaflet";
-import { GS_region } from "../../untils/apis";
+import { GS_region } from "../../utils/apis";
 import withLoadOff from "../HOC/withLoadOff";
 
 const SwitchRegion = () => {
