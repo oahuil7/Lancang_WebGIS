@@ -3,6 +3,7 @@ import Map from './Map';
 import HeaderBar from "./HeaderBar";
 import Sider from "./Sider";
 import { MapContext } from "./Context/ContextManager";
+import ResetButton from "./ResetButton";
 
 const Container = () => {
   const [map, setMap] = useState(null);
@@ -19,6 +20,7 @@ const Container = () => {
         <HeaderBar />
         {map ? <Sider/> : null}
         {displayMap}
+        <ResetButton></ResetButton>
       </div>
     </MapContext.Provider>
   )

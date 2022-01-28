@@ -1,12 +1,11 @@
 import { geoJSON } from "leaflet";
-import { GS_region } from "../../utils/apis";
 import withLoadOff from "../HOC/withLoadOff";
 
 const SwitchRegion = () => {
   const makeRegionLayer = data => {
     return geoJSON(data)
   }
-  const SwitchRegionWithLoadOff = withLoadOff(GS_region, makeRegionLayer)
+  const SwitchRegionWithLoadOff = withLoadOff("lancang_region84", makeRegionLayer)
 
   return (
     <SwitchRegionWithLoadOff></SwitchRegionWithLoadOff>

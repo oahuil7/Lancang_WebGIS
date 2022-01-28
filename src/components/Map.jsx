@@ -4,10 +4,15 @@ import MiniMapControl from "./MiniMapControl";
 import { MapContainerWrap } from "./Styled";
 import { TDT_API_Par, Mapbox_API, OpenStreetMap_API } from "../utils/apis";
 
+const bounds = [
+  [21, 87],
+  [34.5, 111.5]
+]
+
 const Map = ({ setMap }) => {
   return (
     <MapContainerWrap>
-      <MapContainer id='map-container' center={[24.43, 98.58]} zoom={5}  whenCreated={setMap}>
+      <MapContainer id='map-container' bounds={bounds}  whenCreated={setMap}>
       <LayersControl position="topright">
         <LayersControl.BaseLayer checked name="天地图地形底图">
           <TileLayer
