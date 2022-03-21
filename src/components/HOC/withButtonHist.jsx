@@ -22,7 +22,7 @@ const withButtonHist = (WrappedComponent) => {
       <>
         <Button
           className="button"
-          type="primary"
+          // type="primary"
           shape="circle"
           icon={<SearchOutlined />}
           onClick={showModal}
@@ -37,7 +37,12 @@ const withButtonHist = (WrappedComponent) => {
           footer={null}
           centered={true}
         >
-          <WrappedComponent varName={props.varName} multiLines={props.multiLines}></WrappedComponent>
+          <WrappedComponent
+            varName={props.varName}
+            multiLines={props.multiLines}
+            min={props.min}
+            max={props.max}
+          ></WrappedComponent>
         </Modal>
       </>
     )

@@ -1,17 +1,47 @@
 import styled from "styled-components";
-const SiderWitdth = "300px"
+import noto from "../assets/NotoSerifSC-Regular.otf"
+
+const SiderWitdth = "350px"
 const SiderHeight = "100vh - 46px"
 
 const HeaderBarWrap = styled.div`
+  @font-face {
+    font-family: 'noto';
+    src: url(${noto}) format('TrueType');
+  }
+
+  height: 47px;
+  border-bottom: 1px solid #8080806e;
+
   .header-name {
-    color: #fff;
+    font-family: 'noto';
+    color: #000;
     float: left;
-    background-color: #001529;
+    ${'' /* background-color: #001529; */}
+    background-color: #fff;
     height: 46px;
-    width: calc(100% - 200px);
+    width: calc(100% - 100px);
     text-align: center;
     line-height: 46px;
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  .links {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 47px;
+    
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 0 22px 0 22px;
+    }
   }
 `
 
@@ -19,6 +49,7 @@ const SiderWrap = styled.div`
   height: calc(${SiderHeight});
   width: ${SiderWitdth};
   position: absolute;
+  overflow-y: auto;
 
   .switch {
     position: absolute;

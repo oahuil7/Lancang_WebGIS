@@ -32,7 +32,7 @@ const Map = ({ setMap }) => {
             url={TDT_API_Par('img')}
           />
         </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Mapbox">
+        {/* <LayersControl.BaseLayer name="Mapbox">
           <TileLayer
             attribution='&copy; <a href="https://www.mapbox.com/">Mapbox</a>'
             url={Mapbox_API}
@@ -43,7 +43,7 @@ const Map = ({ setMap }) => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url={OpenStreetMap_API}
           />
-        </LayersControl.BaseLayer>
+        </LayersControl.BaseLayer> */}
         <LayersControl.Overlay checked name="天地图注记">
           <TileLayer 
             url={TDT_API_Par('cva')}

@@ -1,6 +1,6 @@
 import { geoJSON, Icon } from "leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
-import withLoadOff from "../HOC/withLoadOff";
+import MySwitch from "./MySwitch";
 
 const SwitchStation = () => {
   const makeStationLayer = data => {
@@ -30,10 +30,9 @@ const SwitchStation = () => {
     return newLayer
   }
 
-  const SwitchStationWithLoadOff = withLoadOff("station", makeStationLayer)
 
   return (
-    <SwitchStationWithLoadOff></SwitchStationWithLoadOff>
+    <MySwitch dataName="station" fn={makeStationLayer} />
   )
 }
 

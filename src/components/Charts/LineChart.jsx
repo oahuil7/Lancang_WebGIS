@@ -1,7 +1,7 @@
 import { Line } from '@ant-design/charts';
 import { useState,useEffect, useCallback } from 'react'
 
-const LineChart = ({varName, multiLines=0}) => {
+const LineChart = ({varName, min, max, multiLines=0}) => {
   const [data, setData] = useState([])
   const asyncFetch = useCallback(() => {
     fetch(`http://localhost:5000/hist/${varName}`)
@@ -21,18 +21,22 @@ const LineChart = ({varName, multiLines=0}) => {
     forceFit: true,
     xField: 'year',
     yField: 'value',
+    yAxis: {
+      min: min,
+      max: max,
+    },
     smooth: true,
   };
 
   const configMulti = {
     data,
     padding: 'auto',
-    forceFit: true,
+    // forceFit: true,
     xField: 'year',
     yField: 'value',
     smooth: true,
     legend: {
-      position: 'right-top',
+      position: 'top',
     },
     seriesField: 'type',
     color: d => d.type === 'UF' ? '#ff6666' : '#0055cc',
